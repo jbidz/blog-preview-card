@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Figtree";
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(0, 0%, 50%);
+  --color-black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Figtree", system-ui, "Segoe ui", serif;
+  background-color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 384px;
+  background-color: var(--color-white);
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  border-radius: 24px;
+  z-index: -1;
+  top: 10px;
+  left: 10px;
+}
+
+.card__img > img {
+  border-radius: 10px;
+}
+
+.card__body {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.card__body > .card__title {
+  font-size: 24px;
+  color: var(--color-black);
+  font-weight: 800;
+}
+
+.card__body > .card__badge {
+  font-size: 14px;
+  color: var(--color-black);
+  /* background-color: var(--color-primary); */
+}
+
+.card__body > .card__badge div {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--color-primary);
+  font-weight: 800;
+  border-radius: 4px;
+}
+
+.card__body > .card__date {
+  font-size: 14px;
+  color: var(--color-black);
+}
+
+.card__body > .card__description {
+  color: var(--color-grey);
+  font-size: 16px;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card__author img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card__author p {
+  font-size: 14px;
+  font-weight: 800;
+}
